@@ -1,0 +1,74 @@
+[
+  {
+    "toyId": 13,
+    "toyName": "Remote Control Monster Truck",
+    "sellerName": "Off-Road Racers",
+    "sellerEmail": "trucks@offroad.com",
+    "price": 45.99,
+    "rating": 4.6,
+    "availableQuantity": 60,
+    "description": "A powerful, 4x4 remote control monster truck with oversized tires, designed for rough terrains. (Car Type)",
+    "pictureURL": "https://i.ibb.co/pvcrKNGk/istockphoto-483630545-1024x1024.jpg", 
+    "subCategory": "Remote Control"
+  },
+  {
+    "toyId": 14,
+    "toyName": "Nerf Elite 2.0 Dart Blaster",
+    "sellerName": "Action Zone Toys",
+    "sellerEmail": "nerf@actionzone.com",
+    "price": 28.50,
+    "rating": 4.7,
+    "availableQuantity": 110,
+    "description": "A popular foam dart blaster for action-packed indoor and outdoor fun. Safe and easy to operate. (Dart Blaster Type)",
+    "pictureURL": "https://i.ibb.co/fV4SLqfd/3d-view-powerful-weapon.jpg", 
+    "subCategory": "Action Figures"
+  },
+  {
+    "toyId": 15,
+    "toyName": "Kids Cricket Bat & Ball Set",
+    "sellerName": "Sports Fun Gear",
+    "sellerEmail": "sports@fungear.com",
+    "price": 19.99,
+    "rating": 4.8,
+    "availableQuantity": 85,
+    "description": "A lightweight plastic cricket bat and soft ball set, perfect for young children learning the basics of the game. (Bat Type)",
+    "pictureURL": "https://i.ibb.co/3mCGxjtc/33192.jpg", 
+    "subCategory": "Sports Toys"
+  },
+  {
+    "toyId": 16,
+    "toyName": "Dinosaur Action Figure Set",
+    "sellerName": "Prehistoric World Toys",
+    "sellerEmail": "dino@prehistoric.com",
+    "price": 35.00,
+    "rating": 4.9,
+    "availableQuantity": 75,
+    "description": "A set of 5 realistic, large dinosaur figures (T-Rex, Triceratops, etc.) for imaginative prehistoric play.",
+    "pictureURL": "https://i.ibb.co/XfZ1VXt9/premium-photo-1741788842165-0b6feea44ce8.jpg", 
+    "subCategory": "Action Figures"
+  },
+  {
+  "toyId": 19,
+  "toyName": "Art Easel for Kids",
+  "sellerName": "Little Artists Studio",
+  "sellerEmail": "art@studio.com",
+  "price": 65.00,
+  "rating": 4.7,
+  "availableQuantity": 40,
+  "description": "A double-sided wooden art easel with a chalkboard on one side and a whiteboard on the other. Includes a paper roll holder for painting.",
+  "pictureURL": "https://i.ibb.co/MkbgwMsr/photo-1666665222427-7fbdb10e0623.jpg", 
+  "subCategory": "Creative Arts"
+},
+  {
+    "toyId": 18,
+    "toyName": "Play Kitchen Set",
+    "sellerName": "Role Play Toys Inc.",
+    "sellerEmail": "kitchen@roleplay.com",
+    "price": 85.00,
+    "rating": 4.7,
+    "availableQuantity": 35,
+    "description": "A compact, realistic pretend play kitchen set with sound and light effects, promoting role-playing skills.",
+    "pictureURL": "https://i.ibb.co/Hf6NXvgk/9055404.jpg", 
+    "subCategory": "Role Play"
+  }
+]
