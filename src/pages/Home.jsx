@@ -7,9 +7,9 @@ const Home = () => {
 
     useEffect(() => {
         fetch("/toy.json")
-            .then(res => res.json())
-            .then(data => setToys(data.slice(0, 3))) // প্রথম 3 toys
-            .catch(err => console.error(err));
+            .then((res) => res.json())
+            .then((data) => setToys(data.slice(0, 3))) // first 3 toys
+            .catch((err) => console.error(err));
     }, []);
 
     return (
@@ -22,14 +22,16 @@ const Home = () => {
                 <h2 className="text-3xl font-semibold mb-6 text-purple-600">
                     Popular Toys
                 </h2>
-                <div className="flex flex-wrap justify-center">
-                    {toys.map(toy => (
+
+                {/* Horizontal flex container */}
+                <div className="flex flex-row justify-center gap-3 overflow-x-auto px-4">
+                    {toys.map((toy) => (
                         <ToyCard key={toy.toyId} toy={toy} />
                     ))}
                 </div>
 
-                {/* View All button centered below cards */}
-                <div className="mt-8">
+                {/* View All button centered */}
+                <div className="mt-6">
                     <Link to="/alltoys" className="btn btn-rose btn-lg">
                         View All Toys
                     </Link>

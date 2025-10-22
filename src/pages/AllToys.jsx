@@ -5,21 +5,20 @@ const AllToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        // Public folder theke JSON load
         fetch("/toy.json")
-            .then((res) => res.json())
-            .then((data) => setToys(data))
-            .catch((err) => console.error(err));
+            .then(res => res.json())
+            .then(data => setToys(data))
+            .catch(err => console.error(err));
     }, []);
 
     return (
-        <div className="container mx-auto py-10">
-            <h1 className="text-3xl font-bold mb-6 text-center text-rose-700">
+        <div className="container mx-auto py-10 bg-yellow-50 min-h-screen">
+            <h1 className="text-4xl text-center font-bold text-rose-600 mb-6">
                 All Toys
             </h1>
             <div className="flex flex-wrap justify-center">
-                {toys.map((toy) => (
-                    <ToyCard key={toy.toyId} toy={toy} />
+                {toys.map((toy, index) => (
+                    <ToyCard key={toy.toyId} toy={toy} offset={index % 2 === 0} />
                 ))}
             </div>
         </div>
