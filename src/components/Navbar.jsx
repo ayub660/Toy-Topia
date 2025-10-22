@@ -1,22 +1,8 @@
-import React, { useState } from "react";
+// src/components/Navbar.jsx
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-    // User state - প্রথমে null (login নেই)
-    const [user, setUser] = useState(null);
-
-    // Temporary login/logout simulation
-    const handleLogin = () => {
-        setUser({
-            name: "John Doe",
-            photoURL: "https://i.pravatar.cc/40",
-        });
-    };
-
-    const handleLogout = () => {
-        setUser(null);
-    };
-
     return (
         <div className="navbar bg-rose-200 text-rose-900 shadow-lg px-4 lg:px-8">
             <div className="navbar-start">
@@ -61,23 +47,9 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end">
-                {user ? (
-                    <div className="flex items-center gap-3">
-                        <img
-                            src={user.photoURL}
-                            alt={user.name}
-                            className="w-10 h-10 rounded-full border-2 border-white"
-                            title={user.name}
-                        />
-                        <button onClick={handleLogout} className="btn btn-sm btn-rose">
-                            Logout
-                        </button>
-                    </div>
-                ) : (
-                    <button onClick={handleLogin} className="btn btn-primary">
-                        Login
-                    </button>
-                )}
+                <Link to="/login" className="btn btn-primary">
+                    Login
+                </Link>
             </div>
         </div>
     );

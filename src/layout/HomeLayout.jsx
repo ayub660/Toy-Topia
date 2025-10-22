@@ -1,3 +1,4 @@
+// src/layout/HomeLayout.jsx
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -7,7 +8,7 @@ const HomeLayout = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-grow">
+            <main className="flex-grow bg-pink-50">
                 <Outlet />
             </main>
             <Footer />

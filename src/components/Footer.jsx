@@ -1,38 +1,29 @@
+// src/components/Footer.jsx
 import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-pink-200 text-pink-900 rounded-t-xl">
-            {/* Services Section */}
-            <div>
-                <h6 className="footer-title text-lg font-bold mb-2">Services</h6>
-                <a className="link link-hover block">Branding</a>
-                <a className="link link-hover block">Design</a>
-                <a className="link link-hover block">Marketing</a>
-                <a className="link link-hover block">Advertisement</a>
-            </div>
-
-            {/* Company Section */}
-            <div>
-                <h6 className="footer-title text-lg font-bold mb-2">Company</h6>
-                <a className="link link-hover block">About us</a>
-                <a className="link link-hover block">Contact</a>
-                <a className="link link-hover block">Jobs</a>
-                <a className="link link-hover block">Press kit</a>
-            </div>
-
-            {/* Legal Section */}
-            <div>
-                <h6 className="footer-title text-lg font-bold mb-2">Legal</h6>
-                <a className="link link-hover block">Terms of use</a>
-                <a className="link link-hover block">Privacy policy</a>
-                <a className="link link-hover block">Cookie policy</a>
-            </div>
-
-            {/* Copyright */}
-            <div className="mt-4 sm:mt-0 sm:col-span-3 text-center text-pink-900 font-semibold">
-                &copy; {new Date().getFullYear()} ToyTopia. All rights reserved.
-            </div>
+        <footer className="footer sm:footer-horizontal bg-rose-200 text-rose-900 p-10">
+            <nav>
+                <h6 className="footer-title">Services</h6>
+                <a className="link link-hover">Branding</a>
+                <a className="link link-hover">Design</a>
+                <a className="link link-hover">Marketing</a>
+                <a className="link link-hover">Advertisement</a>
+            </nav>
+            <nav>
+                <h6 className="footer-title">Company</h6>
+                <a className="link link-hover">About us</a>
+                <a className="link link-hover">Contact</a>
+                <a className="link link-hover">Jobs</a>
+                <a className="link link-hover">Press kit</a>
+            </nav>
+            <nav>
+                <h6 className="footer-title">Legal</h6>
+                <a className="link link-hover">Terms of use</a>
+                <a className="link link-hover">Privacy policy</a>
+                <a className="link link-hover">Cookie policy</a>
+            </nav>
         </footer>
     );
 };
