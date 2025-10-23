@@ -8,7 +8,6 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ForgotPassword from "../pages/ForgotPassword";
 import NotFound from "../pages/NotFound";
-import ExtraPage from "../pages/ExtraPage";
 import PrivateRoute from "../components/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -27,18 +26,11 @@ const router = createBrowserRouter([
                     </PrivateRoute>
                 ),
             },
-            {
-                path: "/profile",
-                element: (
-                    <PrivateRoute>
-                        <MyProfile />
-                    </PrivateRoute>
-                ),
-            },
-            { path: "/extra", element: <ExtraPage /> },
+            { path: "/profile", element: <PrivateRoute><MyProfile /></PrivateRoute> },
             { path: "/login", element: <Login /> },
             { path: "/register", element: <Register /> },
             { path: "/forgot-password", element: <ForgotPassword /> },
+            { path: "*", element: <NotFound /> },
         ],
     },
 ]);

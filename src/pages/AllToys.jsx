@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ToyCard from "../components/ToyCard";
+import HomeSlider from "../components/HomeSlider";
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
@@ -12,14 +13,18 @@ const AllToys = () => {
     }, []);
 
     return (
-        <div className="container mx-auto py-10 bg-yellow-50 min-h-screen">
-            <h1 className="text-4xl text-center font-bold text-rose-600 mb-6">
-                All Toys
-            </h1>
-            <div className="flex flex-wrap justify-center">
-                {toys.map((toy, index) => (
-                    <ToyCard key={toy.toyId} toy={toy} offset={index % 2 === 0} />
-                ))}
+        <div className="bg-pink-50 min-h-screen py-10">
+            {/* --- Slide Show --- */}
+            <HomeSlider />
+
+            <div className="max-w-7xl mx-auto px-4 lg:px-8 mt-8">
+                <h1 className="text-4xl font-bold text-rose-700 mb-6 text-center">All Toys</h1>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {toys.map(toy => (
+                        <ToyCard key={toy.toyId} toy={toy} />
+                    ))}
+                </div>
             </div>
         </div>
     );

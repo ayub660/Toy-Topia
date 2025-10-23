@@ -1,4 +1,4 @@
-// Home.jsx
+// src/pages/Home.jsx
 import React, { useEffect, useState } from "react";
 import ToyCard from "../components/ToyCard";
 import { Link } from "react-router-dom";
@@ -9,14 +9,15 @@ const Home = () => {
     useEffect(() => {
         fetch("/toy.json")
             .then((res) => res.json())
-            .then((data) => setToys(data.slice(0, 3)))
+            .then((data) => setToys(data.slice(0, 3))) // প্রথম 3 toys দেখাবে
             .catch((err) => console.error(err));
     }, []);
 
     return (
-        <div className="min-h-screen w-full bg-rose-200"> {/* Full width background */}
-            <div className="max-w-7xl mx-auto px-4 py-10"> {/* Centered content */}
-                <h1 className="text-5xl font-bold mb-6 text-center text-rose-800">
+        <div className="bg-rose-200 min-h-screen">
+            {/* Container Centered */}
+            <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
+                <h1 className="text-5xl font-bold mb-6 text-center text-rose-900">
                     Welcome to ToyTopia!
                 </h1>
 
@@ -25,12 +26,14 @@ const Home = () => {
                         Popular Toys
                     </h2>
 
-                    <div className="flex flex-row justify-center gap-3 overflow-x-auto px-4">
+                    {/* Horizontal flex container */}
+                    <div className="flex flex-row justify-center gap-4 overflow-x-auto py-4">
                         {toys.map((toy) => (
                             <ToyCard key={toy.toyId} toy={toy} />
                         ))}
                     </div>
 
+                    {/* View All button centered */}
                     <div className="mt-6">
                         <Link to="/alltoys" className="btn btn-rose btn-lg">
                             View All Toys
