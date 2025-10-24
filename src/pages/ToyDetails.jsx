@@ -1,5 +1,3 @@
-// src/pages/ToyDetails.jsx
-
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
@@ -12,25 +10,21 @@ const ToyDetails = () => {
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        // Shuru tei shob state reset kora bhalo, jate ID change hole notun fetch shuru hoy
+
         setLoading(true);
         setError(false);
         setToy(null);
 
-        // ⭐ GURUTTOPURNO: ID FORMAT VALIDATION ⭐
-        // Ekhane check kora hocche je ID shotti-i ekta shongkhya kina (e.g., '14' is valid, '14abc' is invalid)
+
         if (isNaN(Number(id))) {
             setLoading(false);
             setError(true);
-            // Invalid format hole ekhane useEffect execution bondho hoye jabe
+
             return;
         }
-
-        // Jodi ID format thik thake, tokhon data fetch korbe
         fetch("/toy.json")
             .then((res) => res.json())
             .then((data) => {
-                // parseInt diye ID-ke number-e convert kora hocche, jeta apnar JSON-er shonge match korbe
                 const toyIdAsNumber = parseInt(id);
                 const foundToy = data.find((t) => t.toyId === toyIdAsNumber);
 
@@ -38,26 +32,24 @@ const ToyDetails = () => {
                     setToy(foundToy);
                     setError(false);
                 } else {
-                    // Toy khuje paowa jaayni, kintu format thik chilo
+
                     setError(true);
                 }
                 setLoading(false);
             })
             .catch((err) => {
-                // Fetching error-er jonyo (network ba server shomoshya)
+
                 console.error("Fetch Error:", err);
                 setError(true);
                 setLoading(false);
             });
-    }, [id]); // id change holei effect cholbe
+    }, [id]);
 
-    // --- Render Logic ---
+
 
     if (loading) {
         return <Loader />;
     }
-
-    // 404 Case: Error set hoyeche ba toy data paowa jaayni
     if (error || !toy) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-pink-50">

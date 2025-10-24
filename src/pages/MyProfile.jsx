@@ -1,4 +1,3 @@
-// src/pages/MyProfile.jsx
 import React, { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../layout/context/AuthProvider";
 import { updateProfile } from "firebase/auth";
