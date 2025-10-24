@@ -17,7 +17,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // SweetAlert helper
+    // SweetAlert 
     const showToast = (icon, title) => {
         Swal.fire({
             toast: true,

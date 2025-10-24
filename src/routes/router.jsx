@@ -13,11 +13,11 @@ import PrivateRoute from "../components/PrivateRoute";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <HomeLayout />,
-        errorElement: <NotFound />,
+        element: <HomeLayout></HomeLayout>,
+        errorElement: <NotFound></NotFound>,
         children: [
-            { path: "/", element: <Home /> },
-            { path: "/alltoys", element: <AllToys /> },
+            { path: "/", element: <Home></Home> },
+            { path: "/alltoys", element: <AllToys></AllToys> },
             {
                 path: "/toy/:id",
                 element: (
@@ -27,10 +27,10 @@ const router = createBrowserRouter([
                 ),
             },
             { path: "/profile", element: <PrivateRoute><MyProfile /></PrivateRoute> },
-            { path: "/login", element: <Login /> },
-            { path: "/register", element: <Register /> },
-            { path: "/forgot-password", element: <ForgotPassword /> },
-            { path: "*", element: <NotFound /> },
+            { path: "/login", element: <Login></Login> },
+            { path: "/register", element: <Register></Register> },
+            { path: "/forgot-password", element: <ForgotPassword></ForgotPassword> },
+            { path: "*", element: <NotFound></NotFound> },
         ],
     },
 ]);
