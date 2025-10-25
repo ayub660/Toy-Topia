@@ -11,7 +11,7 @@ GitHub Repository: https://github.com/ayub660/Toy-Topia
 
 ---
 
-## 🌟 Key Features
+= Key Features
 - Firebase Authentication (Email/Password + Google Sign-In)  
 - Protected routes for Toy Details & Profile pages  
 - JSON-based toy data with images hosted on imgbb/postimages  
@@ -24,7 +24,7 @@ GitHub Repository: https://github.com/ayub660/Toy-Topia
 
 ---
 
-## 🧰 Technologies Used
+Technologies Used
 - React  
 - Firebase (Auth & Hosting)  
 - Tailwind CSS + DaisyUI  
@@ -34,6 +34,6 @@ GitHub Repository: https://github.com/ayub660/Toy-Topia
 
 ---
 
-## 📦 NPM Packages
+npm package
 ```bash
-npm install firebase react-router-dom sweetalert2 aos swiper
+npm install firebase react-router-dom sweetalert2 
