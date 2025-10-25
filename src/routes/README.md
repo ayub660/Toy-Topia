@@ -35,5 +35,7 @@ Technologies Used
 ---
 
 npm package
-```bash
+
 npm install firebase react-router-dom sweetalert2 
+
+...........
